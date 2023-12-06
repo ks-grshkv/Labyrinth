@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
 body {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -27,5 +31,9 @@ body {
   
   .wall {
     background-color: #333; /* Set the background color for walls */
+  }
+
+  .exit {
+    background-color: aquamarine;
   }
   
