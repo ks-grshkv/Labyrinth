@@ -27,6 +27,7 @@ body {
   .circle {
     background-color: #3498db;
     border-radius: 50%;
+    /* position: absolute; */
   }
   
   .wall {
@@ -37,3 +38,12 @@ body {
     background-color: aquamarine;
   }
   
+  .circle2 {
+
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10000rem;
+  }

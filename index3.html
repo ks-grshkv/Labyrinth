@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .circle {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="circle"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const circle = document.querySelector(".circle");
+    const step = 10;
+
+    function moveCircle(direction) {
+      const currentLeft = parseInt(circle.style.left) || 0;
+      const currentTop = parseInt(circle.style.top) || 0;
+
+      switch (direction) {
+        case "ArrowUp":
+          circle.style.top = currentTop - step + "px";
+          break;
+        case "ArrowDown":
+          circle.style.top = currentTop + step + "px";
+          break;
+        case "ArrowLeft":
+          circle.style.left = currentLeft - step + "px";
+          break;
+        case "ArrowRight":
+          circle.style.left = currentLeft + step + "px";
+          break;
+        default:
+          break;
+      }
+    }
+
+    document.addEventListener("keydown", function (event) {
+      moveCircle(event.key);
+    });
+  });
+</script>
+
+</body>
+</html>
