@@ -3,7 +3,8 @@
 
 body {
     display: flex;
-    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    font-family: 'Roboto mono';
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -11,9 +12,10 @@ body {
   }
   
   #game-container {
+    
     display: grid;
     grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
+    grid-template-rows: repeat(8, 30px);
     gap: 1px;
   }
   
@@ -25,25 +27,49 @@ body {
   }
   
   .circle {
-    background-color: #3498db;
-    border-radius: 50%;
+    background-color: #fff;
+    /* border-radius: 50%; */
+    background-image: url("./dude.png");
+    background-size: contain;
     /* position: absolute; */
   }
   
   .wall {
-    background-color: #333; /* Set the background color for walls */
+    background-color: #333333; /* Set the background color for walls */
   }
 
   .exit {
-    background-color: aquamarine;
+    background-color: #fff;
+    background-size: contain;
+    
+    background-image: url("./exit.png");
   }
   
+  .dog {
+    background-color: #fff;
+    background-size: contain;
+    
+    /* border-radius: 50%; */
+    background-image: url("./dog2.png");
+  }
+
   .circle2 {
 
     width: 30px;
     height: 30px;
-    background-color: #3498db;
-    border-radius: 50%;
+    background-color: #fff;
+    background-image: url("./dude.png");
+    background-size: contain;
     position: absolute;
     z-index: 10000rem;
   }
+
+  #fail_alert {
+    margin-top: -5rem !important;
+    visibility: hidden;
+    background-color: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    z-index: 9;
+    margin: 3rem;
+}
