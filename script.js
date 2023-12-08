@@ -434,7 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 Dialogue(DIALOGUES['stubborn_stone'][l_three_counter])
                 INTERRACTIONS_ON = false
                 l_three_counter++;
-
             }
         }
 
@@ -470,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exit.classList.remove('exit')
             exit.classList.add('dog')
             disable_movement = true
-            Dialogue('You acquired a new friend!')
+            Dialogue('You acquired a new friend! Feels like a win, even if there is no exit now...')
             setTimeout(()=>{
                 dog_Int = setInterval(() => {
                     const dog = document.querySelector('.dog')
@@ -484,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(dog_Int);
                 disable_movement = false;
                 nextLevel();
-            }, 7000)
+            }, 8000)
 
         }
     }
@@ -566,5 +565,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initializeLevel(1);
+    Dialogue('Welcome to the Totally Normal Labyrinth! Please open it on a laptop or a PC (the game is not smartphone-friendly). Use arrow keys to navigate.')
 });
 

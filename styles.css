@@ -72,4 +72,5 @@ body {
     padding: 1rem;
     z-index: 9;
     margin: 3rem;
+    max-width: 50%;
 }
